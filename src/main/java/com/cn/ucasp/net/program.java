@@ -11,9 +11,11 @@ public class program {
 	        b[i] = (byte) (fbit >> (24 - i * 8));    
 	    }   
 		S7TCPConnection connection = new S7TCPConnection()
-				.withIp("127.0.0.1")
+				.withIp("10.25.157.90")
+				.withPort(102)
+				.withCpu(CpuType.S71500)
 				.Open();
-		connection.Write("DB1.DBB0","1");		
+		connection.Write("DB902.DBB0","1");
 		Object in=connection.Read("DB1.DBB0");
 		System.out.println(in);
 		

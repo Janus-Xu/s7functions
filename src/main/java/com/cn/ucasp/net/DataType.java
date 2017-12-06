@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.cn.ucasp.net;
 
 import lombok.Getter;

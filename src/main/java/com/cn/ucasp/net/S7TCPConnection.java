@@ -191,6 +191,7 @@ public class S7TCPConnection {
 			errorCode = ErrorCode.NoError;
 
 		} catch (Exception e) {
+			e.printStackTrace();
 			errorCode = ErrorCode.ConnectionError;
 		}
 		return bytes;
